@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Document</title>
 </head>
 
@@ -12,15 +13,17 @@
     <div class="box">
         <h1 class="h1">Secret Cabinet</h1>
         <h2>Email</h2>
-        <input type="email" class="input" placeholder="Enter your email">
+        <input type="email" class="input" id="email" placeholder="Enter your email">
         <h2>Password</h2>
         <div class="password-box">
-            <input type="password" class="input" placeholder="Enter your password">
-            <button class="eye"><img src="images/open-eye.svg" alt=""></button>
+            <input type="password" id="password" class="input" placeholder="Enter your password">
+            <button class="eye" id="eye"><img class="eye-icon" src="images/open-eye.svg" alt=""></button>
         </div>
         <button class="button" id="button">Login</button>
         <p class="message" id="message"></p>
     </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

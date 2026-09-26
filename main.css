@@ -9,6 +9,7 @@
     --surface: #fff;
     --text-main: #2e2d39;
     --button: #9a99bb;
+    --button-hover: #8783a8;
 }
 
 body {
@@ -44,8 +45,18 @@ input {
     width: 80%;
     padding: 0.5rem;
     border: 1px solid var(--button);
+    color: var(--text-main);
     border-radius: 3px;
     outline: none;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+input:focus {
+    border: 2px solid var(--button);
 }
 
 .password-box {
@@ -63,20 +74,30 @@ input {
 
 .eye {
     position: absolute;
-    right: -5px;
-    bottom: -45%;
-    top: 50%;
+    right: 15px;
+    top: 55%;
     transform: translateY(-50%);
     cursor: pointer;
     background-color: transparent;
     color: var(--text-main);
+    padding: 0;
+    margin: 0;
 }
 
 button {
     padding: 0.5rem 2rem;
+    margin-top: 1rem;
     border: none;
     border-radius: 3px;
     background-color: var(--button);
     color: var(--surface);
     cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+.error {
+    border: 1px solid red;
 }
