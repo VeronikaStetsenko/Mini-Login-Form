@@ -8,15 +8,40 @@
     --background: #dcdee9;
     --surface: #fff;
     --text-main: #2e2d39;
+    --input-background: #fff;
     --button: #9a99bb;
     --button-hover: #8783a8;
 }
 
+body.dark-theme {
+    --background: #171923;
+    --surface: #252936;
+    --text-main: #f1f3f8;
+    --input-background: #1d202b;
+    --button: #7773a8;
+    --button-hover: #918dc5;
+    --eye: brightness(0) invert(1);
+}
+
 body {
+    min-height: 100vh;
+    position: relative;
     display: grid;
     place-items: center;
     background-color: var(--background);
     color: var(--text-main);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--surface);
+    color: var(--text-main);
+    border: 1px solid var(--button);
 }
 
 .box {
@@ -27,6 +52,7 @@ body {
     width: min(90%, 600px);
     background-color: var(--surface);
     border-radius: 20px;
+    transition: background-color 0.2s ease;
 
     display: flex;
     flex-direction: column;
@@ -45,6 +71,7 @@ input {
     width: 80%;
     padding: 0.5rem;
     border: 1px solid var(--button);
+    background-color: var(--input-background);
     color: var(--text-main);
     border-radius: 3px;
     outline: none;
@@ -79,9 +106,12 @@ input:focus {
     transform: translateY(-50%);
     cursor: pointer;
     background-color: transparent;
-    color: var(--text-main);
     padding: 0;
     margin: 0;
+}
+
+.eye-icon {
+    filter: var(--eye);
 }
 
 button {
